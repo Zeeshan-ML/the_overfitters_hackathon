@@ -22,9 +22,9 @@ templates = Jinja2Templates(directory="../app/templates")
 # model = tf.keras.models.load_model(MODEL_PATH)
 
 # Download model from Google Drive and load it
-FILE_ID = "1T4RWW8QltMe7lHbng-ntBkgu-2-a8a42"
+FILE_ID = "13IS0RzjePdDIvhGLYoBiywl2NjQdoKU9"
 MODEL_URL = f"https://drive.google.com/uc?id={FILE_ID}"
-MODEL_LOCAL_PATH = "model.h5"
+MODEL_LOCAL_PATH = "rs_model.h5"
 
 if not os.path.exists(MODEL_LOCAL_PATH):
     print("Downloading model from Google Drive...")
