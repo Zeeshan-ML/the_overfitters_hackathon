@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block title %}Home - Retinopathy Detection{% endblock %}
+{% block content %}
+<section class="home-section">
+  <h1>Diabetic Retinopathy Detection</h1>
+  <p>
+    Diabetic Retinopathy (DR) is one of the most common and serious complications of diabetes. It occurs when chronically high blood sugar levels damage the delicate blood vessels in the retina. This damage can lead to leakage, swelling, and the growth of new, fragile blood vessels that compromise vision—potentially leading to blindness if not treated early.
+  </p>
+  
+  <h2>Understanding Diabetic Retinopathy</h2>
+  <p>
+    The progression of DR is typically classified into the following stages:
+  </p>
+  <ul>
+    <li><strong>No DR:</strong> A healthy retina without any signs of damage.</li>
+    <li><strong>Mild DR:</strong> Early signs include the presence of microaneurysms (small bulges in blood vessels).</li>
+    <li><strong>Moderate DR:</strong> Increased leakage and swelling of the retinal vessels become evident.</li>
+    <li><strong>Severe DR:</strong> Extensive blockage of blood vessels leads to significant retinal ischemia and vision loss.</li>
+    <li><strong>Proliferative DR:</strong> The most advanced stage, marked by the growth of new, fragile blood vessels that can bleed and cause scar tissue formation.</li>
+  </ul>
+  
+  <h2>Dataset Details</h2>
+  <ul>
+    <li>
+      <strong>Download Link:</strong>
+      <a href="https://www.kaggle.com/datasets/kushagratandon12/diabetic-retinopathy-balanced/data" target="_blank">
+        Kaggle Dataset
+      </a>
+    </li>
+    <li>The dataset consists of labeled retinal fundus images provided in JPEG/PNG format.</li>
+    <li>Labels and metadata are available in a structured CSV file.</li>
+  </ul>
+  <p>
+    The dataset used for this project comprises high-quality retinal fundus images in JPEG/PNG format. Each image is labeled according to one of the five DR stages listed above, with corresponding metadata provided in a CSV file.
+  </p>
+  
+  <h2>Infyma AI Hackathon</h2>
+  <p>
+    This project is part of the Infyma AI Hackathon. Our team of 6th semester Data Science students at COMSATS is leveraging state-of-the-art machine learning and deep learning techniques to build an effective tool for early DR detection. By combining innovative research with practical application, we aim to contribute to improved diagnostic processes and better patient outcomes.
+  </p>
+  
+  <h2>Project Goals</h2>
+  <p>
+    The primary goal of this project is to develop an AI model that can accurately classify retinal images into different DR severity levels. By using advanced deep learning techniques and transfer learning with a Convolutional Neural Network (CNN), we aim to build a solution that can identify whether an image indicates DR and, if so, determine its severity.
+  </p>
+  
+  <h2>Methodology</h2>
+  <p>
+    Our approach involves several key steps:
+  </p>
+  <ul>
+    <li><strong>Data Preprocessing:</strong> Cleaning and preparing the dataset for training, including resizing images, normalizing pixel values, and augmenting the data to improve model robustness.</li>
+    <li><strong>Model Selection:</strong> Choosing an appropriate CNN architecture and leveraging transfer learning to benefit from pre-trained models on large image datasets.</li>
+    <li><strong>Training:</strong> Training the model on the preprocessed dataset, fine-tuning hyperparameters, and using techniques such as early stopping and learning rate scheduling to optimize performance.</li>
+    <li><strong>Evaluation:</strong> Assessing the model's performance using metrics such as accuracy, precision, recall, and F1-score, and validating the results on a separate test set.</li>
+    <li><strong>Deployment:</strong> Integrating the trained model into a web application using FastAPI, allowing users to upload retinal images and receive predictions on DR severity.</li>
+  </ul>
+  
+  <h2>Future Work</h2>
+  <p>
+    While our current focus is on developing a robust model for DR detection, there are several areas for future improvement and expansion:
+  </p>
+  <ul>
+    <li><strong>Model Enhancement:</strong> Exploring more advanced architectures and techniques, such as ensemble learning and attention mechanisms, to further improve model accuracy and reliability.</li>
+    <li><strong>Real-Time Detection:</strong> Implementing real-time detection capabilities to provide instant feedback during eye examinations.</li>
+    <li><strong>Integration with Medical Systems:</strong> Collaborating with healthcare providers to integrate the model into existing medical systems and workflows, facilitating seamless adoption and usage.</li>
+    <li><strong>Extending to Other Conditions:</strong> Expanding the model to detect other retinal conditions, such as age-related macular degeneration (AMD) and glaucoma, to provide a comprehensive eye health assessment tool.</li>
+  </ul>
+  
+  <h2>Conclusion</h2>
+  <p>
+    Diabetic Retinopathy is a significant health concern that requires early detection and intervention to prevent vision loss. By leveraging the power of AI and deep learning, we aim to develop a reliable and effective tool for DR detection, contributing to better patient outcomes and advancing the field of medical diagnostics.
+  </p>
+</section>
+{% endblock %}

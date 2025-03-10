@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Test Model - Retinopathy Detection{% endblock %}
+{% block content %}
+<h1>Test the Model</h1>
+<p>Upload an image to test our CNN model for retinopathy detection:</p>
+<form id="uploadForm" enctype="multipart/form-data">
+    <input type="file" id="file" name="file" accept="image/*" required>
+    <button type="submit">Upload and Predict</button>
+</form>
+<div id="result"></div>
+{% endblock %}

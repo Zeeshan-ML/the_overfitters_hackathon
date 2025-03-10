@@ -1,0 +1,448 @@
+/*---------------------------------------*/
+/*         CSS Variables & Imports     */
+/*---------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #00c6ff;
+  --accent-color: #ffdd57;
+  --dark-color: #333;
+  --light-bg: #f2f7fc;
+  --card-bg: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.15);
+  --transition-speed: 0.3s;
+}
+
+/*---------------------------------------*/
+/*           Global Styles               */
+/*---------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--light-bg);
+  color: var(--dark-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/*---------------------------------------*/
+/*            Sidebar Styles             */
+/*---------------------------------------*/
+.sidebar {
+  width: 260px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  padding: 2rem 1rem;
+  color: #fff;
+  box-shadow: 2px 0 12px var(--shadow-color);
+  animation: slideIn 0.5s ease-out forwards;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+.sidebar h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin-bottom: 1.5rem;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 0.6rem 1rem;
+  display: block;
+  border-radius: 4px;
+  transition: background var(--transition-speed) ease;
+}
+
+.sidebar ul li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/*---------------------------------------*/
+/*         Main Content Styles           */
+/*---------------------------------------*/
+.content {
+  margin-left: 280px;
+  padding: 3rem;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/*---------------------------------------*/
+/*       Header & Footer (if used)       */
+/*---------------------------------------*/
+header, footer {
+  background: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  padding: 1.2rem 0;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  animation: fadeIn 1s ease-in;
+}
+
+/*---------------------------------------*/
+/*           Typography                  */
+/*---------------------------------------*/
+h1, h2, h3, h4 {
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  color: var(--dark-color);
+  letter-spacing: 0.5px;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+/*---------------------------------------*/
+/*            Card Component             */
+/*---------------------------------------*/
+.card {
+  background: var(--card-bg);
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px var(--shadow-color);
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px var(--shadow-color);
+}
+
+/*---------------------------------------*/
+/*             Form Styles               */
+/*---------------------------------------*/
+form {
+  max-width: 700px;
+  margin: 0 auto;
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+form label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="file"],
+form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color var(--transition-speed) ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus,
+form input[type="file"]:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+form button {
+  display: inline-block;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition-speed) ease;
+}
+
+form button:hover {
+  background: #0056b3;
+}
+
+/*---------------------------------------*/
+/*          Home Page Specific           */
+/*---------------------------------------*/
+.home-header {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: var(--primary-color);
+  animation: popIn 0.6s ease-out;
+}
+.home-section {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px var(--shadow-color);
+  animation: fadeIn 1s ease-in;
+}
+
+.home-section h1,
+.home-section h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.home-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.home-section ul {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.home-section ul li {
+  margin-bottom: 0.8rem;
+}
+
+.home-section a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color var(--transition-speed) ease;
+}
+
+.home-section a:hover {
+  color: var(--accent-color);
+}
+
+
+@keyframes popIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+/*---------------------------------------*/
+/*          About Section Container      */
+/*---------------------------------------*/
+.about-section {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    animation: fadeIn 1s ease-in;
+  }
+  
+  .about-section h1,
+  .about-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .about-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-section ul {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  
+  .about-section ul li {
+    margin-bottom: 0.8rem;
+  }
+  
+  .about-section a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color var(--transition-speed) ease;
+  }
+  
+  .about-section a:hover {
+    color: var(--accent-color);
+  }
+  
+  /*---------------------------------------*/
+  /*         About Team Section            */
+  /*---------------------------------------*/
+  .about-team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    animation: fadeIn 1s ease-in;
+  }
+  
+  .about-team .team-member {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 260px;
+    text-align: center;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    transition: transform var(--transition-speed) ease;
+  }
+  
+  .about-team .team-member:hover {
+    transform: translateY(-5px);
+  }
+  
+  .about-team .team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 3px solid var(--primary-color);
+  }
+  
+
+/*---------------------------------------*/
+/*         Contact Page Specific         */
+/*---------------------------------------*/
+.contact-info {
+  text-align: center;
+  margin-bottom: 2rem;
+  animation: fadeIn 1s ease-in;
+}
+
+.contact-info i {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.contact-form {
+  background: var(--card-bg);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px var(--shadow-color);
+}
+/*---------------------------------------*/
+/*          Test Page Specific           */
+/*---------------------------------------*/
+.test-section {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    animation: fadeIn 1s ease-in;
+  }
+  
+  .test-section form {
+    margin-top: 1.5rem;
+  }
+  
+  /* Enhanced Prediction Result Card */
+  .test-result {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    transition: transform 0.3s ease;
+  }
+  
+  .test-result:hover {
+    transform: translateY(-5px);
+  }
+  
+  .test-result img {
+    max-width: 200px;
+    border-radius: 8px;
+    margin-right: 20px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .test-result .result-info {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .test-result .result-info h2 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+  }
+  
+  .test-result .result-info p {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+  
+  .test-result .result-info pre {
+    background: #eef2f7;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    overflow-x: auto;
+  }
+  
+  /* Utility Classes */
+  .mt-2 { margin-top: 2rem; }
+  .mb-2 { margin-bottom: 2rem; }
+  .p-2  { padding: 2rem; }
+  
+
+/*---------------------------------------*/
+/*        Icon & Button Enhancements     */
+/*---------------------------------------*/
+.icon {
+  margin-right: 0.5rem;
+  transition: transform var(--transition-speed) ease;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.btn {
+  display: inline-block;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+
+.btn:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+}

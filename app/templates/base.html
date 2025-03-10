@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Retinopathy Detection{% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-p9U9z/2grzPZ/9FzEfPu8SbfBmvk8Nf7InMSeX5r2yc6gkSKcbwzkWo57iI7e6x1SfWw/jm1oKJ1xLY9dB41Qg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/test">Test</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
