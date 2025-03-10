@@ -1,0 +1,22 @@
+🚀 Getting Started
+Follow the steps below to set up and run the project locally:
+Python 3.10.12 is required
+
+1. Install Dependencies
+Make sure you have Python and pip installed. Then, install all required packages:
+pip install -r requirements.txt
+
+
+2. Navigate to the Application Directory
+Move into the main application folder:
+cd app
+
+3. Run the Application
+Start the FastAPI server using Uvicorn:
+uvicorn main:app --reload
+
+4. Model Loading
+On the first run, the model will be automatically downloaded from the cloud drive.
+The download time may vary depending on your internet speed.
+Once the model is downloaded and loaded, the application views will be accessible via the browser.
+
