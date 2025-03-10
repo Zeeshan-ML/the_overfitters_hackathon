@@ -69,7 +69,7 @@ async def predict(file: UploadFile = File(...)):
     image = Image.open(io.BytesIO(contents)).convert("RGB")
     
     # Resize the image to the target size your model expects (e.g., 224x224).
-    target_size = (224, 224)  # Update if your model requires a different size.
+    target_size = (256, 256)  # Update if your model requires a different size.
     image = image.resize(target_size)
     
     # Convert the image to a numpy array and scale pixel values to [0,1].
